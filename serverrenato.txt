@@ -1,0 +1,6 @@
+select p.id, p.nome_produto, l.id, l.descricao, u.id, u.nome  from produtos as p
+inner join lojas as l
+on l.id=p.id_loja
+inner join usuarios as u
+on u.id=p.id_vendedor
+where p.id=1
