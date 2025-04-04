@@ -1,0 +1,15 @@
+
+
+DELETE from produtos;
+drop TABLE produtos;
+
+CREATE TABLE produtos(
+    
+	id int AUTO_INCREMENT not null PRIMARY KEY,
+    id_loja int not null,
+    id_vendedor int not null,
+    nome_produto varchar (50) not null,
+    preco decimal not null,
+    FOREIGN key (id_loja) 
+    REFERENCES lojas(id)
+);
